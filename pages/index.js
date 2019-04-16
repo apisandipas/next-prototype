@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { connect } from "react-redux";
 
 const Title = styled.h1`
   color: cornflowerblue;
@@ -6,12 +7,13 @@ const Title = styled.h1`
   font-size: 5rem;
 `;
 
-function Home() {
+function Home({ foo }) {
   return (
     <div>
       <Title>Welcome to Next.js!</Title>
+      <div>Prop from Redux {foo}</div>
     </div>
   );
 }
 
-export default Home;
+export default connect(state => state)(Home);
