@@ -6,9 +6,6 @@ import withRedux from "next-redux-wrapper";
 
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
-    // we can dispatch from here too
-    ctx.store.dispatch({ type: "FOO", payload: "foo-payload" });
-
     const pageProps = Component.getInitialProps
       ? await Component.getInitialProps(ctx)
       : {};
