@@ -18,7 +18,6 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <title>SSR/Next Prototype</title>
           <link rel="icon" href="/static/favicon.ico" />
           {this.props.styleTags}
         </Head>
